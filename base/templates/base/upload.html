@@ -4,7 +4,7 @@
 
 {% block content %}
         <div class="container">
-        <h1>Dosya Yükleme</h1>
+        <h2>File Upload</h2>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="file" name="document">

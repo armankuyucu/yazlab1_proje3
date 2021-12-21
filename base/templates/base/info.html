@@ -1,0 +1,77 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="container">
+
+        <table style="margin-top: 10px" class="table table-bordered">
+            <thead>
+            Tüm Bilgiler
+{#            {% for document in all_objects %}#}
+{#                <tr>#}
+{#                    <td>{{ document.name }}</td>#}
+{#                    <td>{{ document.title }}</td>#}
+{#                    <td>{{ document.user }}</td>#}
+{#                    <td>{{ document.author }}</td>#}
+{#                    <td>{{ document.pdf }}</td>#}
+{#                    <td>{{ document.student_id }}</td>#}
+{#                    <td>{{ document.type_of_education }}</td>#}
+{#                    <td>{{ document.lecture_name }}</td>#}
+{#                    <td>{{ document.abstract }}</td>#}
+{#                    <td>{{ document.term }}</td>#}
+{#                    <td>{{ document.keywords }}</td>#}
+{#                    <td>{{ document.advisor }}</td>#}
+{#                    <td>{{ document.jury }}</td>#}
+{#                </tr>#}
+{#            {% empty %}#}
+{#                <tr>#}
+{#                    <td colspan="5">Veri Yok</td>#}
+{#                </tr>#}
+{#            {% endfor %}#}
+            </thead>
+
+            <tbody>
+            {% for document in all_objects %}
+            <tr>
+                <th scope="col"> ---------------- </th>
+            </tr>
+
+            <tr>
+                <th scope="col"> Dosya Yolu: {{ document.name }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Başlık: {{ document.title }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Kullanıcı: {{ document.user }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Yazar: {{ document.author }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Öğrenci No: {{ document.student_id }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Öğretim Türü: {{ document.type_of_education }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Özet: {{ document.abstract }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Dönem: {{ document.term }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Anahtar Kelimeler: {{ document.keywords }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Danışman: {{ document.advisor }}</th>
+            </tr>
+            <tr>
+                <th scope="col"> Juri: {{ document.jury }}</th>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

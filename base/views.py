@@ -43,6 +43,7 @@ def userPanel(request):
     return render(request, 'base/userpanel.html', context)
 
 
+@staff_member_required
 def info(request):
     all_objects = Document.objects.all()
     context = {
@@ -213,27 +214,6 @@ def extract_info(request, uploaded_file):
         print("keywords:", keywords_list)
         print("abstract:", abstract)
         print("type of education:", type_of_education)
-
-        # # Convert lists to string
-        # author = ""
-        # for i in names_list:
-        #     author += i + " "
-        #
-        # student_id = ""
-        # for i in student_numbers:
-        #     student_id += i + " "
-        #
-        # type_of_education_str = ""
-        # for i in type_of_education:
-        #     type_of_education_str += i + " "
-        #
-        # keywords = ""
-        # for i in keywords_list:
-        #     keywords += i + " "
-        #
-        # jury = ""
-        # for i in jury_list:
-        #     jury += i + " "
 
         # Save to the database
         Document.objects.create(name=os.path.join(BASE_DIR, f'media/{uploaded_file}'),

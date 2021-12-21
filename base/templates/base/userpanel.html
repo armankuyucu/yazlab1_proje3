@@ -4,172 +4,186 @@
 
 {% block content %}
     <div class="container">
-    <h4 style="margin-top: 50px">Kullanıcı Paneli</h4>
+        <h2 style="margin-top: 50px">Kullanıcı Paneli</h2>
 
-    <div class="container">
-        <h4 style="margin-top: 50px">Sorgu 1 Ekranı</h4>
+        <div class="container">
+            <h4 style="margin-top: 50px">Sorgu 1 Ekranı</h4>
 
-        <form class="form-inline" method="get">
-            <div class="form-group mb-1">
-                <div style="margin-top: 50px" class="row mb-3">
-                    <div class="col-1 col">
-                        <label class="sr-only">Yazar</label>
-                    </div>
-                    <div class="col-4 col">{% render_field myFilter1.form.author class="form-control" %}</div>
-                    <div class="col-4 col">
-                        <div class="col-lg-1">
-                            <button style="btn: btn-success btn-lg float-right" type="submit"
-                                    class="btn btn-primary">Sorgula
-                            </button>
+            <form class="form-inline" method="get">
+                <div class="form-group mb-1">
+                    <div style="margin-top: 50px" class="row mb-3">
+                        <div class="col-1 col">
+                            <label class="sr-only">Yazar</label>
+                        </div>
+                        <div class="col-4 col">{% render_field myFilter1.form.author class="form-control" %}</div>
+                        <div class="col-4 col">
+                            <div class="col-lg-1">
+                                <button style="btn: btn-success btn-lg float-right" type="submit"
+                                        class="btn btn-primary">Sorgula
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div style="margin-top: 50px" class="row mb-3">
-                    <div class="col-1 col">
-                        <label class="sr-only">Proje Başlığı</label>
-                    </div>
-                    <div class="col-4 col">{% render_field myFilter1.form.title class="form-control" %}</div>
-                    <div class="col-4 col">
-                        <div class="col-lg-1">
-                            <button style="btn: btn-success btn-lg float-right" type="submit"
-                                    class="btn btn-primary">Sorgula
-                            </button>
+                    <div style="margin-top: 50px" class="row mb-3">
+                        <div class="col-1 col">
+                            <label class="sr-only">Ders Adı</label>
+                        </div>
+                        <div class="col-4 col">{% render_field myFilter1.form.lecture_name class="form-control" %}</div>
+                        <div class="col-4 col">
+                            <div class="col-lg-1">
+                                <button style="btn: btn-success btn-lg float-right" type="submit"
+                                        class="btn btn-primary">Sorgula
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div style="margin-top: 50px" class="row mb-3">
-                    <div class="col-1 col">
-                        <label class="sr-only">Anahtar Kelimeler</label>
-                    </div>
-                    <div class="col-4 col">{% render_field myFilter1.form.keywords class="form-control" %}</div>
-                    <div class="col-4 col">
-                        <div class="col-lg-1">
-                            <button style="btn: btn-success btn-lg float-right" type="submit"
-                                    class="btn btn-primary">Sorgula
-                            </button>
+                    <div style="margin-top: 50px" class="row mb-3">
+                        <div class="col-1 col">
+                            <label class="sr-only">Proje Başlığı</label>
+                        </div>
+                        <div class="col-4 col">{% render_field myFilter1.form.title class="form-control" %}</div>
+                        <div class="col-4 col">
+                            <div class="col-lg-1">
+                                <button style="btn: btn-success btn-lg float-right" type="submit"
+                                        class="btn btn-primary">Sorgula
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div style="margin-top: 50px" class="row mb-3">
-                    <div class="col-1 col">
-                        <label class="sr-only">Dönem</label>
-                    </div>
-                    <div class="col-4 col">{% render_field myFilter1.form.term class="form-control" %}</div>
-                    <div class="col-4 col">
-                        <div class="col-lg-1">
-                            <button style="btn: btn-success btn-lg float-right" type="submit"
-                                    class="btn btn-primary">Sorgula
-                            </button>
+                    <div style="margin-top: 50px" class="row mb-3">
+                        <div class="col-1 col">
+                            <label class="sr-only">Anahtar Kelimeler</label>
+                        </div>
+                        <div class="col-4 col">{% render_field myFilter1.form.keywords class="form-control" %}</div>
+                        <div class="col-4 col">
+                            <div class="col-lg-1">
+                                <button style="btn: btn-success btn-lg float-right" type="submit"
+                                        class="btn btn-primary">Sorgula
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+                    <div style="margin-top: 50px" class="row mb-3">
+                        <div class="col-1 col">
+                            <label class="sr-only">Dönem</label>
+                        </div>
+                        <div class="col-4 col">{% render_field myFilter1.form.term class="form-control" %}</div>
+                        <div class="col-4 col">
+                            <div class="col-lg-1">
+                                <button style="btn: btn-success btn-lg float-right" type="submit"
+                                        class="btn btn-primary">Sorgula
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
-
-        </form>
-        <table style="margin-top: 10px" class="table table-bordered">
-            <thead>
-            <tr>
-                <th scope="col"> Kullanıcı</th>
-                <th scope="col"> Başlık</th>
-                <th scope="col"> Yazar</th>
-                <th scope="col"> Öğrenci No</th>
-                <th scope="col"> Öğretim Türü</th>
-                <th scope="col"> Ders Adı</th>
-                <th scope="col"> Dönem</th>
-                <th scope="col"> Anahtar Kelimeler</th>
-                <th scope="col"> Danışman</th>
-{#                <th scope="col"> Tüm Bilgiler</th>#}
-
-            </tr>
-            </thead>
-            <tbody>
-            {% for document in myFilter1.qs %}
+            </form>
+            <table style="margin-top: 10px" class="table table-bordered">
+                <thead>
                 <tr>
-                    <td>{{ document.user }}</td>
-                    <td>{{ document.title }}</td>
-                    <td>{{ document.author }}</td>
-                    <td>{{ document.student_id }}</td>
-                    <td>{{ document.type_of_education }}</td>
-                    <td>{{ document.lecture_name }}</td>
-                    <td>{{ document.term }}</td>
-                    <td>{{ document.keywords }}</td>
-                    <td>{{ document.advisor }}</td>
-{#                    <td> <a href="{% url 'info' %}">link</a></td>#}
+                    <th scope="col"> Kullanıcı</th>
+                    <th scope="col"> Başlık</th>
+                    <th scope="col"> Yazar</th>
+                    <th scope="col"> Öğrenci No</th>
+                    <th scope="col"> Öğretim Türü</th>
+                    <th scope="col"> Ders Adı</th>
+                    <th scope="col"> Dönem</th>
+                    <th scope="col"> Anahtar Kelimeler</th>
+                    <th scope="col"> Danışman</th>
+                    {#                <th scope="col"> Tüm Bilgiler</th>#}
 
                 </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="5">Veri Yok</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                {% for document in myFilter1.qs %}
+                    <tr>
+                        <td>{{ document.user }}</td>
+                        <td>{{ document.title }}</td>
+                        <td>{{ document.author }}</td>
+                        <td>{{ document.student_id }}</td>
+                        <td>{{ document.type_of_education }}</td>
+                        <td>{{ document.lecture_name }}</td>
+                        <td>{{ document.term }}</td>
+                        <td>{{ document.keywords }}</td>
+                        <td>{{ document.advisor }}</td>
+                        {#                    <td> <a href="{% url 'info' %}">link</a></td>#}
 
-    </div>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="5">Veri Yok</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
-    <div class="container">
-        <form method="get">
-            <div class="col-md-12 well">
-                <h4 style="margin-top: 50px">Sorgu 2 Ekranı</h4>
-                <div style="margin-top: 10px" class="row">
-                    <div class="col">
-                        {#                        <p>{{ myFilter.form.title.label_tag }} {{ myFilter.form.title }}</p>#}
-                        {#                        {{ myFilter.form.title }}#}
-                        {% render_field myFilter2.form.user class="form-control" %}
+        </div>
+
+        <div class="container">
+            <form method="get">
+                <div class="col-md-12 well">
+                    <h4 style="margin-top: 50px">Sorgu 2 Ekranı</h4>
+                    <div style="margin-top: 10px" class="row">
+                        <div class="col">
+                            {#                        <p>{{ myFilter.form.title.label_tag }} {{ myFilter.form.title }}</p>#}
+                            {#                        {{ myFilter.form.title }}#}
+                            {% render_field myFilter2.form.user class="form-control" %}
+                        </div>
+                        <div class="col">
+                            {#                        <p>{{ myFilter.form.user.label_tag }} {{ myFilter.form.user }}</p>#}
+                            {% render_field myFilter2.form.term class="form-control" placeholder="Dönem" %}
+                        </div>
+                        <div class="col">
+                            {#                        {{ myFilter.form.author.label_tag }}#}
+                            {#                        {{ myFilter.form.author }}#}
+                            {% render_field myFilter2.form.lecture_name class="form-control" placeholder="Ders Adı" %}
+                        </div>
                     </div>
-                    <div class="col">
-                        {#                        <p>{{ myFilter.form.user.label_tag }} {{ myFilter.form.user }}</p>#}
-                        {% render_field myFilter2.form.term class="form-control" placeholder="Dönem" %}
-                    </div>
-                    <div class="col">
-                        {#                        {{ myFilter.form.author.label_tag }}#}
-                        {#                        {{ myFilter.form.author }}#}
-                        {% render_field myFilter2.form.lecture_name class="form-control" placeholder="Ders Adı" %}
-                    </div>
+                    <button style="margin-top: 10px" type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span> Sorgula
+                    </button>
                 </div>
-                <button style="margin-top: 10px" type="submit" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-search"></span> Sorgula
-                </button>
-            </div>
-        </form>
-        <table style="margin-top: 10px" class="table table-bordered">
-            <thead>
-            <tr>
-                <th scope="col"> Kullanıcı</th>
-                <th scope="col"> Başlık</th>
-                <th scope="col"> Yazar</th>
-                <th scope="col"> Öğrenci No</th>
-                <th scope="col"> Öğretim Türü</th>
-                <th scope="col"> Ders Adı</th>
-                <th scope="col"> Dönem</th>
-                <th scope="col"> Anahtar Kelimeler</th>
-                <th scope="col"> Danışman</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for document in myFilter2.qs %}
+            </form>
+            <table style="margin-top: 10px" class="table table-bordered">
+                <thead>
                 <tr>
-                    <td>{{ document.user }}</td>
-                    <td>{{ document.title }}</td>
-                    <td>{{ document.author }}</td>
-                    <td>{{ document.student_id }}</td>
-                    <td>{{ document.type_of_education }}</td>
-                    <td>{{ document.lecture_name }}</td>
-                    <td>{{ document.term }}</td>
-                    <td>{{ document.keywords }}</td>
-                    <td>{{ document.advisor }}</td>
+                    <th scope="col"> Kullanıcı</th>
+                    <th scope="col"> Başlık</th>
+                    <th scope="col"> Yazar</th>
+                    <th scope="col"> Öğrenci No</th>
+                    <th scope="col"> Öğretim Türü</th>
+                    <th scope="col"> Ders Adı</th>
+                    <th scope="col"> Dönem</th>
+                    <th scope="col"> Anahtar Kelimeler</th>
+                    <th scope="col"> Danışman</th>
                 </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="5">Veri Yok</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                {% for document in myFilter2.qs %}
+                    <tr>
+                        <td>{{ document.user }}</td>
+                        <td>{{ document.title }}</td>
+                        <td>{{ document.author }}</td>
+                        <td>{{ document.student_id }}</td>
+                        <td>{{ document.type_of_education }}</td>
+                        <td>{{ document.lecture_name }}</td>
+                        <td>{{ document.term }}</td>
+                        <td>{{ document.keywords }}</td>
+                        <td>{{ document.advisor }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="5">Veri Yok</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 {% endblock content %}
