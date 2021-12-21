@@ -6,6 +6,10 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.userPanel, name="userpanel"),
+    path('info/', views.info, name="info"),
+    path('upload/', views.upload, name="upload"),
+    path('adminpanel/', views.adminPanel, name="adminpanel"),
+
 ]
 
 if settings.DEBUG:
